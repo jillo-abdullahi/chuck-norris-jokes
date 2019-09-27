@@ -1,0 +1,3 @@
+export const GET_JOKE_STARTED = 'GET_JOKE_STARTED';
+export const GET_JOKE_SUCCESS = 'GET_JOKE_SUCCESS';
+export const GET_JOKE_FAILED = 'GET_JOKE_FAILED';

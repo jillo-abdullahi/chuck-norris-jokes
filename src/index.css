@@ -1,13 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background: #fff;
+  font-family: 'Acme', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* =========== Categories page ========== */
+
+main {
+  font-family: 'Bitter', sans-serif;
+  width: 100%;
+  height: 100vh;
 }
+
+main h2 {
+  text-align: center;
+  color: #eeeeee;
+}
+
+.category {
+  color: #fff;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+}
+
+.category-inner {
+  position: relative;
+  padding: 0;
+}
+
+.category-image {
+  position: relative;
+  background: #388E3C;
+  width: 100%;
+  height: 80vh;
+  border-bottom: 1px solid #000;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 90%);
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 90%);
+}
+
+.category-image img {
+  position: absolute;
+  left: -108px;
+  bottom: 0;
+}
+
+.category:hover{
+  cursor: pointer;
+  box-shadow:
+          1px 1px #000,
+          2px 2px #000,
+          3px 3px #000;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+.category-text {
+  position: absolute;
+  color: #000;
+  bottom: 0;
+  right: 10px;
+}
+
+.category-text h3 {
+  color: #000;
+  font-weight: 700;
+  text-shadow: 2px 2px #eee;
+}
+
+@media (max-width: 992px){
+  main h2 {
+    text-align: center;
+    color: #eeeeee;
+  }
+
+  .category {
+    margin-top: 20px;
+  }
+}
+
+
+/* ============== Jokes page ========== */
+
+.joke {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joke-inner {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 70%;
+  height: 400px;
+  box-shadow:
+          1px 1px #388E3C,
+          2px 2px #388E3C,
+          3px 3px #000;
+}
+
+.joke-button {
+  font-family: 'Bitter', serif;
+  font-size: .9rem;
+  border-radius: 5px;
+  width: 100px;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin: 10px;
+  padding: 2px 5px;
+  text-align: left;
+  box-shadow:
+          1px 1px #000,
+          2px 2px #000,
+          3px 3px #000;
+  transition: all .2s ease-in-out;
+}
+
+.joke-button:focus {
+  background-color: #fff;
+}
+.joke-button:active {
+  background-color: #fff;
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.btn-container {
+  font-family: 'Bitter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.joke-description {
+  padding-left: 20px;
+  font-family: 'Bitter', sans-serif !important;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.loader {
+  width: 100%;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.joke-container {
+  width: 100%;
+}
+
+.random-btn {
+  margin-bottom: 40px;
+}
+
+.tweet-btn,
+.tweet-btn:focus,
+.tweet-btn:active,
+.tweet-btn:hover {
+  background-color: #1DA1F3;
+  color: #fff;
+}
+
+.whatsapp-btn,
+.whatsapp-btn:focus,
+.whatsapp-btn:active,
+.whatsapp-btn:hover {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.share {
+  width: 100px;
+}
+
+.joke {
+  background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23222222' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23444444' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23666666' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23888888' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23aaaaaa' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23cccccc' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23EEE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .joke-description {
+    padding: 15px 0 0 0;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 422px) {
+  .joke-description {
+    padding: 10px 0 0 0;
+    font-size: 1.1rem;
+  }
+}
+
