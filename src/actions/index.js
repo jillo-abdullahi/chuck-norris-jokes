@@ -13,9 +13,9 @@ const getJoke = (category) => {
         let url = '';
 
         if (category === 'nerdy' || category === 'explicit') {
-            url = `http://api.icndb.com/jokes/random/limitTo=${[category]}`;
+            url = `https://api.icndb.com/jokes/random/limitTo=${[category]}`;
         } else {
-            url = `http://api.icndb.com/jokes/${category}`;
+            url = `https://api.icndb.com/jokes/${category}`;
         }
 
         axios.get(url)
